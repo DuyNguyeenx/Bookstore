@@ -19,11 +19,11 @@
             <tbody>
                 @foreach ($orders as $key => $order)
                     <tr>
-                        <th scope="row">{{ $order->id }}</th>
+                        <th scope="row">{{ $key+1 }}</th>
                         <td>{{ $order->name }}</td>
                         <td>{{ $order->phone }}</td>
                         <td>{{ $order->address }}</td>
-                        <td>{{ $order->total_amount }}</td>
+                        <td>{{ formatNumberPrice($order->total_amount) }}</td>
                         <td>
                             @if ($order->status == 0)
                                 <span class="badge bg-warning">Đang giao</span>

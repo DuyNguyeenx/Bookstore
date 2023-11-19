@@ -17,9 +17,9 @@
     <tbody>
       @foreach ($order_details as $key => $order_detail)
       <tr>
-        <td scope="row">{{$order_detail->id}}</td>
+        <td scope="row">{{$key+1}}</td>
         <td>{{$order_detail->book->title}}</td>
-        <td>{{$order_detail->price}}</td>
+        <td>{{ formatNumberPrice($order_detail->price)}}</td>
         <td>{{$order_detail->quantity}}</td>
         <td>{{formatNumberPrice($order_detail->total)}}</td>
       </tr>

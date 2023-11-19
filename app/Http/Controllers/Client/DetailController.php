@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\rating;
 
-class ClientBookController extends Controller
+class DetailController extends Controller
 {
 	public function genre($id) {
         $genre = genre::find($id);

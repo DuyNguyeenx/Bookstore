@@ -1,5 +1,5 @@
 @extends('client.templates.layout')
-@section('title', 'Giỏ hàng')
+
 @section('main')
 @component('templates.form', [
                     'method' => 'POST',
@@ -86,6 +86,8 @@
 
 
               </tr>
+              @endforeach
+                            @endif
               <tr class="bottom_button">
                 <td>
                  @endcomponent
@@ -109,8 +111,6 @@
                 </td>
               </tr>
 
-              @endforeach
-                            @endif
             </tbody>
           </table>
           <div class="checkout_btn_inner float-right">

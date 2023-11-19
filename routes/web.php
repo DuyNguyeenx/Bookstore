@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Client\DetailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\BookController;
@@ -13,11 +14,9 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\RatingController;
 use App\Http\Controllers\Admin\InvoiceController;
 use App\Http\Controllers\Client\ReviewController;
-use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Client\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PromotionController;
-use App\Http\Controllers\Client\ClientBookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +39,9 @@ Route::get('/', [HomeController::class, 'index'])->name('client.home');
 // client.search
 Route::get('/search', [HomeController::class, 'search'])->name('client.search');
 // client.genre
-Route::get('/genre/{genre}', [ClientBookController::class, 'genre'])->name('client.genre');
+Route::get('/genre/{genre}', [DetailController::class, 'genre'])->name('client.genre');
 // client.detail
-Route::get('/detail/{book}', [ClientBookController::class, 'detail'])->name('client.detail');
+Route::get('/detail/{book}', [DetailController::class, 'detail'])->name('client.detail');
 // cart
 Route::get('/cart', [CartController::class, 'index'])->name('client.cart');
 //client.cart.update

@@ -1,5 +1,5 @@
 @extends('client.templates.layout')
-{{-- @section('title', 'Home') --}}
+
 @section('main')
 
 
